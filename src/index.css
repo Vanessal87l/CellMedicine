@@ -1,6 +1,6 @@
 @import "tailwindcss";
 body {
-  background-image: url("./assets/images/glavniy.jpg");
+  /* background-image: url("./assets/images/glavniy.jpg"); */
    /* background-image:url("https://mdclabs.almoosaclinics.com/wp-content/uploads/2017/04/events-parallax-1.jpg"); */
 background-position: center;  
 width: 100%;

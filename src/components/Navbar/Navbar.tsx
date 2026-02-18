@@ -4,7 +4,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { cn } from "@/lib/utils";
 
 import LogoWhite from "@/assets/images/logoWhite.png";
-import LogoSeriy from "@/assets/images/logoSeriy.png";
+// import LogoSeriy from "@/assets/images/logoSeriy.png";
 
 type ECGLinkProps = {
   to?: string;
@@ -22,7 +22,7 @@ const ECGLink = ({
   asButton,
 }: ECGLinkProps) => {
   const base =
-    "group relative inline-flex items-center justify-center hover:text-white text-[#3BC1A8] transition-colors duration-200 select-none";
+    "group relative inline-flex items-center justify-center text-white   transition-colors duration-200 select-none";
 
   const content = (
     <>
@@ -151,17 +151,6 @@ const Navbar = () => {
         key: "home",
         label: "Главная",
         to: "/",
-        dropdown: {
-          items: [
-            { label: "Регенеративная медицина", to: "/" },
-            { label: "Клеточные технологии.", to: "/" },
-            { label: "Краткое позиционирование", to: "/" },
-            { label: "Ключевые направления терапии", to: "/" },
-            { label: "Преимущества центра", to: "/" },
-            { label: "Научная база / технологии", to: "/" },
-            { label: "CTA: консультация / задать вопрос", to: "/" },
-          ],
-        },
       },
       {
         key: "about",
@@ -274,7 +263,7 @@ const Navbar = () => {
         className={cn(
           "fixed top-0 left-0 w-full z-50",
           "flex items-center justify-center",
-          "bg-white/10 backdrop-blur-[20px]",
+          "bg-[#0C7779]/90",
           "h-[85px]",
         )}
       >
@@ -317,7 +306,6 @@ const Navbar = () => {
                     </span>
                   </ECGLink>
 
-                  {/* ✅ dropdown “ustidan chiqadi” */}
                   <div
                     className={cn(
                       "absolute left-1/2 -translate-x-1/2 top-[58px] z-[9999]",
@@ -329,13 +317,13 @@ const Navbar = () => {
                   >
                     <div
                       className={cn(
-                        "min-w-[320px] rounded-2xl bg-white",
+                        "min-w-[320px]  rounded-2xl bg-white",
                         "shadow-[0_18px_60px_rgba(0,0,0,0.25)]",
                         "border border-black/10 overflow-hidden",
                       )}
                     >
                       {m.dropdown?.title ? (
-                        <div className="px-4 py-3 text-[12px] font-semibold tracking-wide text-black/50">
+                        <div className="px-4 py-3 text-[12px] font-semibold text-[#0C7779] tracking-wide ">
                           {m.dropdown.title}
                         </div>
                       ) : null}
@@ -347,8 +335,8 @@ const Navbar = () => {
                             type="button"
                             className={cn(
                               "w-full text-left px-4 py-3",
-                              "text-[13px] font-medium text-slate-700",
-                              "hover:bg-slate-50 hover:text-slate-900 transition-colors",
+                              "text-[13px] font-medium text-[#0C7779]",
+                              "hover:bg-slate-100 hover:text-slate-900 transition-colors",
                             )}
                             onClick={() => {
                               setOpenKey(null);
