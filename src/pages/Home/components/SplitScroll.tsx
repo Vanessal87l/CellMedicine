@@ -46,11 +46,43 @@ export default function SplitScroll({
 
   useLayoutEffect(() => {
     if (!rootRef.current || !textRef.current) return;
-
     const ctx = gsap.context(() => {
+      // Если внутри есть <li>, не используем SplitText: анимируем элементы списка напрямую,
+      // чтобы не ломать структуру ul/ol и сохранились стили списка.
+      const listItems = textRef.current!.querySelectorAll("li");
+
+      if (listItems && listItems.length > 0) {
+        const targets = Array.from(listItems) as Element[];
+
+        gsap.set(targets, {
+          yPercent: fromYPercent,
+          x: fromX,
+          opacity: fromOpacity,
+        });
+
+        const tl = gsap.to(targets, {
+          yPercent: 0,
+          x: 0,
+          opacity: 1,
+          duration,
+          ease: "power4.out",
+          stagger,
+          scrollTrigger: {
+            trigger: rootRef.current,
+            start,
+            once,
+          },
+        });
+
+        return () => {
+          tl.scrollTrigger?.kill();
+          tl.kill();
+        };
+      }
+
+      // Обычное поведение: SplitText для строк/слов/символов
       const split = SplitText.create(textRef.current!, { type: mode });
 
-      // чтобы “lines” не прыгали — делаем overflow-hidden wrapper
       if (mode === "lines") {
         split.lines.forEach((line) => {
           const wrapper = document.createElement("div");
@@ -87,7 +119,6 @@ export default function SplitScroll({
         },
       });
 
-      // ✅ ВАЖНО: не kill all triggers, только свой контекст
       return () => {
         tl.scrollTrigger?.kill();
         tl.kill();
