@@ -17,6 +17,7 @@ import img13 from "@/assets/images/img13.jpg";
 import Terapiya from "./components/Terapiya";
 import StatsStrip from "@/pages/Home/components/StatsStrip";
 import StatBioPulse from "@/pages/Home/components/StatBioPulse";
+import Footer from "@/components/Footer/Footer";
 
 export default function Home() {
   const items = [
@@ -295,7 +296,7 @@ export default function Home() {
         </section>
       </Container>
       <section className="mt-[120px]">
-        <div className=" text-white bg-[#0C7779]/90 text-center flex  justify-center items-center  max-w-auto h-[180px]  ">
+        <div className=" text-white bg-[#0C7779] text-center flex  justify-center items-center  max-w-auto h-[180px]  ">
           <div className=" flex flex-col  font-semibold">
             <p className="text-[25px]"> </p>
             <h1 className="text-[42px] font-bold ">
@@ -313,7 +314,7 @@ export default function Home() {
         </div>
       </Container>
       <section className="mt-[120px]">
-        <div className=" text-white bg-[#0C7779]/90 text-center flex  justify-center items-center  max-w-auto h-[180px]  ">
+        <div className=" text-white bg-[#0C7779] text-center flex  justify-center items-center  max-w-auto h-[180px]  ">
           <div className=" flex flex-col  font-semibold">
             <StatsStrip />
           </div>
@@ -322,6 +323,7 @@ export default function Home() {
           <StatBioPulse />
         </div>
       </section>
+      <Footer />
     </div>
   );
 }

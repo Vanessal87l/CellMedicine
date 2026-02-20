@@ -21,7 +21,7 @@ export default function CtaBioPulse() {
 
               <h2 className="mt-5 text-[34px] leading-[1.05] md:text-[44px] font-extrabold text-slate-900">
                 Запустим восстановление
-                <span className="block bg-gradient-to-r from-[#0C7779] via-[#249E94] to-slate-900 bg-clip-text text-transparent">
+                <span className="block bg-gradient-to-r from-[#0C7779] via-[#0C7779] to-slate-900 bg-clip-text text-transparent">
                   на клеточном уровне
                 </span>
               </h2>
@@ -34,7 +34,7 @@ export default function CtaBioPulse() {
 
               {/* Buttons */}
               <div className="mt-7 flex flex-wrap gap-3">
-                <button className="group inline-flex items-center gap-2 rounded-full bg-[#0C7779] px-6 py-3 text-white font-semibold shadow-[0_14px_30px_rgba(12,119,121,0.28)] hover:bg-[#0A5F5F] transition">
+                <button className="group inline-flex items-center gap-2 rounded-full bg-[#0C7779] px-6 py-3 text-white font-semibold shadow-[0_14px_30px_rgba(12,119,121,0.28)] hover:bg-[#0A5F5F] transition cursor-pointer">
                   Получить план терапии
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
                 </button>
@@ -43,10 +43,10 @@ export default function CtaBioPulse() {
               {/* Contacts */}
               <div className="mt-8 flex flex-wrap items-center gap-5 text-[13px] text-slate-600">
                 <a
-                  className="inline-flex items-center gap-2 hover:text-slate-900 transition"
+                  className="inline-flex items-center gap-2 hover:text-slate-900 transition text-[18px]"
                   href="tel:+998712000000"
                 >
-                  <Phone className="h-4 w-4 text-[#0C7779]" />
+                  <Phone className="h-4 w-4 text-[#0C7779] " />
                   +998 (71) 200-00-00
                 </a>
               </div>
@@ -55,8 +55,8 @@ export default function CtaBioPulse() {
             {/* Right: mini “pulse card” */}
             <div className="relative">
               <div className="h-full rounded-3xl border border-black/5 bg-white/55 backdrop-blur p-6 shadow-[0_20px_60px_rgba(0,0,0,0.08)]">
-                <div className="text-[12px] tracking-[0.22em] font-semibold text-slate-500">
-                  FAST CHECK
+                <div className="text-[14px] tracking-[0.22em] font-semibold text-[#0C7779]">
+                  Быстрая проверка
                 </div>
 
                 <div className="mt-3 text-slate-900 font-extrabold text-[18px]">
@@ -65,15 +65,15 @@ export default function CtaBioPulse() {
 
                 <ul className="mt-4 space-y-3 text-[14px] text-slate-600">
                   <li className="flex gap-3">
-                    <span className="mt-2 h-1.5 w-1.5 rounded-full bg-[#249E94]" />
+                    <span className="mt-2 h-1.5 w-1.5 rounded-full bg-[#0C7779]" />
                     10–15 минут: цель и симптомы
                   </li>
                   <li className="flex gap-3">
-                    <span className="mt-2 h-1.5 w-1.5 rounded-full bg-[#249E94]" />
+                    <span className="mt-2 h-1.5 w-1.5 rounded-full bg-[#0C7779]" />
                     Предварительный протокол
                   </li>
                   <li className="flex gap-3">
-                    <span className="mt-2 h-1.5 w-1.5 rounded-full bg-[#249E94]" />
+                    <span className="mt-2 h-1.5 w-1.5 rounded-full bg-[#0C7779]" />
                     Рекомендации по шагам
                   </li>
                 </ul>
@@ -81,7 +81,7 @@ export default function CtaBioPulse() {
                 {/* Pulse line */}
                 <div className="mt-6 rounded-2xl bg-slate-900/5 p-4">
                   <div className="text-[11px] font-semibold text-slate-500 mb-2">
-                    SIGNAL • regeneration
+                    СИГНАЛ • регенерация
                   </div>
                   <svg
                     viewBox="0 0 120 12"
@@ -97,7 +97,7 @@ export default function CtaBioPulse() {
                         y2="0"
                       >
                         <stop offset="0%" stopColor="#0C7779" />
-                        <stop offset="50%" stopColor="#249E94" />
+                        <stop offset="50%" stopColor="#0C7779" />
                         <stop offset="100%" stopColor="#0C7779" />
                       </linearGradient>
                     </defs>

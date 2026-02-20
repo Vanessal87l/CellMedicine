@@ -268,7 +268,9 @@ const Navbar = () => {
         )}
       >
         <div className="shrink-0 ">
-          <img src={LogoWhite} alt="Logo" className="h-[130px] w-[160px] " />
+          <Link to="">
+            <img src={LogoWhite} alt="Logo" className="h-[120px] w-[140px] " />
+          </Link>
         </div>
 
         <div className="flex items-center justify-center px-4">
