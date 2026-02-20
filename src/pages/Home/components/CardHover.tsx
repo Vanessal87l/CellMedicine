@@ -50,7 +50,9 @@ export default function CardHover({ items }: Props) {
                   />
                 </div>
 
-                <span className="hint">Подробнее</span>
+                <span className=" flex items-end justify-end gap-2 text-[16px] font-medium text-[#0C7779]">
+                  Подробнее
+                </span>
               </div>
             </div>
           </div>
@@ -149,6 +151,7 @@ const Row = styled.div`
   gap: 20px;
   overflow-x: auto;
   scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
 
   scrollbar-width: none;
   &::-webkit-scrollbar {
@@ -159,6 +162,7 @@ const Row = styled.div`
     flex: 0 0 auto;
     width: 400px;
     height: 320px;
+    scroll-snap-align: start;
     color: #0c7779;
   }
 
@@ -169,6 +173,7 @@ const Row = styled.div`
     border-radius: 20px;
     transform-style: preserve-3d;
     perspective: 1400px;
+    transition: all 0.3s ease;
     border: 1px solid rgba(0, 0, 0, 0.1);
   }
 
@@ -261,5 +266,6 @@ const Row = styled.div`
   .book:hover .cover {
     transform: rotateY(-78deg);
     overflow: hidden;
+    transition: all 0.3s ease;
   }
 `;

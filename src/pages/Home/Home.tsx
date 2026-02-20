@@ -7,12 +7,16 @@ import vd3 from "@/assets/video/vd3.mp4";
 import img5 from "@/assets/images/img5.jpg";
 import vd4 from "@/assets/video/vd4.mp4";
 import CardHover from "@/pages/Home/components/CardHover";
-import img6 from "@/assets/images/img6.jpg";
+import img12 from "@/assets/images/img12.jpg";
 import img7 from "@/assets/images/img7.jpg";
 import img8 from "@/assets/images/img8.jpg";
 import img9 from "@/assets/images/img9.jpg";
 import img10 from "@/assets/images/img10.jpg";
 import img11 from "@/assets/images/img11.jpg";
+import img13 from "@/assets/images/img13.jpg";
+import Terapiya from "./components/Terapiya";
+import StatsStrip from "@/pages/Home/components/StatsStrip";
+import StatBioPulse from "@/pages/Home/components/StatBioPulse";
 
 export default function Home() {
   const items = [
@@ -46,7 +50,7 @@ export default function Home() {
       title: "Клеточные технологии",
       description:
         "Создание биосовместимых структур и матриц с применением 3D-биопечати. Обеспечивает поддержку и интеграцию клеток для восстановления органов и сложных тканевых систем.Современные методы культивирования и контроля клеточных структур с соблюдением международных стандартов качества. Совмещение биологии и инженерных решений .",
-      img: img5,
+      img: img13,
     },
     {
       title: "Регенеративная терапия",
@@ -60,7 +64,7 @@ export default function Home() {
       description:
         "Биосовместимые материалы нового поколения, разработанные для интеграции с живыми тканями. Улучшают приживление клеток и создают оптимальную среду для регенерации.Материалы нового поколения, создающие оптимальную среду для роста клеток и регенерации тканей.Биосовместимые материалы нового поколения оптимизирующие.",
 
-      img: img6,
+      img: img12,
     },
   ];
 
@@ -122,7 +126,7 @@ export default function Home() {
             </video>
           </div>
 
-          <div className="flex-1 flex flex-col gap-6">
+          <div className=" flex flex-col gap-2 mb-[20px]">
             <SplitScroll
               mode="lines"
               start="top 85%"
@@ -142,20 +146,28 @@ export default function Home() {
             <SplitScroll
               mode="lines"
               start="top 85%"
-              textClassName="flex flex-col gap-4 text-[18px] text-gray-700"
+              textClassName="flex flex-col gap-2 text-[18px] text-gray-700"
             >
-              <li>
-                <span className="text-[#0C7779] text-[30px]">✔</span>
-                Собственный криобанк мирового уровня
-              </li>
-              <li>
-                <span className="text-[#0C7779] text-[30px]">✔</span> GMP
-                сертифицированные лаборатории
-              </li>
-              <li>
-                <span className="text-[#0C7779] text-[30px]">✔</span>{" "}
-                Международная команда биологов и врачей
-              </li>
+              <ul className="flex flex-col gap-4">
+                <li className="flex gap-3">
+                  <span className="text-[#0C7779] text-2xl leading-none">
+                    ✔
+                  </span>
+                  <span> Собственный криобанк мирового уровня</span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="text-[#0C7779] text-2xl leading-none">
+                    ✔
+                  </span>
+                  <span> GMP сертифицированные лаборатории</span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="text-[#0C7779] text-2xl leading-none">
+                    ✔
+                  </span>
+                  <span> Международная команда биологов и врачей</span>
+                </li>
+              </ul>
             </SplitScroll>
           </div>
         </section>
@@ -293,10 +305,23 @@ export default function Home() {
         </div>
       </section>
       <Container className="relative pt-6">
-        <div className="flex items-center justify-center gap-4">
+        <div className="flex items-center justify-center gap-2">
           <CardHover items={items} />
         </div>
+        <div>
+          <Terapiya />
+        </div>
       </Container>
+      <section className="mt-[120px]">
+        <div className=" text-white bg-[#0C7779]/90 text-center flex  justify-center items-center  max-w-auto h-[180px]  ">
+          <div className=" flex flex-col  font-semibold">
+            <StatsStrip />
+          </div>
+        </div>
+        <div>
+          <StatBioPulse />
+        </div>
+      </section>
     </div>
   );
 }
