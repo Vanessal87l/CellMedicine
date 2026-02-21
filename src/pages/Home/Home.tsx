@@ -1,4 +1,3 @@
-import Navbar from "@/components/Navbar/Navbar";
 import Container from "@/Container/Container";
 import bgMedicineVideo from "@/assets/video/bg-medicine2.mp4";
 import { Activity } from "lucide-react";
@@ -17,7 +16,7 @@ import img13 from "@/assets/images/img13.jpg";
 import Terapiya from "./components/Terapiya";
 import StatsStrip from "@/pages/Home/components/StatsStrip";
 import StatBioPulse from "@/pages/Home/components/StatBioPulse";
-import Footer from "@/components/Footer/Footer";
+import Footer from "@/Layout/Footer/Footer";
 
 export default function Home() {
   const items = [
@@ -80,7 +79,6 @@ export default function Home() {
       >
         <source src={bgMedicineVideo} type="video/mp4" />
       </video>
-      <Navbar />
       <Container className="relative pt-[150px]">
         <div className="flex flex-col gap-5">
           <div className=" text-white bg-[#0C7779]/60 text-center justify-center items-center flex rounded-3xl max-w-[350px] h-[40px] gap-1 ">
